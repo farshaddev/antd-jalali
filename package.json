@@ -33,7 +33,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "ts-declaration": " tsc -p ./tsconfig.lib.json --emitDeclarationOnly --outDir lib/types",
-    "build:lib": "rimraf lib && node ./esbuild.js && npm run ts-declaration"
+    "build:lib": "rimraf lib && node ./esbuild.js && npm run ts-declaration",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "dayjs": "^1.11.10",
